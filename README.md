@@ -6,18 +6,35 @@
 
 ---
 
-# 👋 About Me
-I'm Olajide Ojo, a QA Engineer expanding into Backend Development. I focus on building practical, testable APIs and systems that power real-world workflows. Always learning, always improving.
+## 👋 About Me
 
-# Task Management API – Built with Django Rest Framework
+I'm **Olajide Ojo**, a QA Engineer transitioning into **Backend Development**. I specialize in building practical, testable APIs and backend systems that solve real-world problems.
 
-This project is a simple yet powerful backend API that allows users to manage tasks effectively. It supports user authentication, task creation, updates, and custom scheduling logic.
+---
 
 > 💡 Built as part of my transition into Backend Engineering, showcasing hands-on skills with Django, DRF, and API design.
 
-## What's Included
+## 📌 Project Overview
 
-This repo includes:
+This project is a backend API for managing tasks with user-based access, custom scheduling logic, and clean time validations.
+
+> 💡 Part of my backend engineering journey, focused on building APIs that are easy to test, extend, and scale.
+
+---
+
+## 🚀 Key Features
+
+- ✅ **JWT Auth** – Login, logout, refresh with token blacklisting
+- ✅ **Task Management** – CRUD + toggle completion status
+- ✅ **Date Guardrails** – Prevent past scheduling
+- ✅ **Auto-Calculate Due Time** – Combines start time + duration
+- ✅ **Swagger Docs** – Auto-generated API explorer
+- ✅ **Clean Timestamps** – Consistent `YYYY-MM-DD HH:MM:SS`
+
+---
+
+
+## Repo Structure
 
 ```
 task-api-showcase/
@@ -32,23 +49,12 @@ task-api-showcase/
 ```
 ---
 
-## 🚀 Key Features
-
-- ✅ **JWT Auth** – Login, logout, refresh with token blacklisting
-- ✅ **Task Management** – CRUD + toggle completion status
-- ✅ **Date Guardrails** – Prevent past scheduling
-- ✅ **Auto-Calculate Due Time** – Combines start time + duration
-- ✅ **Swagger Docs** – Auto-generated API explorer
-- ✅ **Clean Timestamps** – Consistent `YYYY-MM-DD HH:MM:SS`
-
----
-
 ## 📸 API Docs Preview
 
 ![Swagger Screenshot](Task-Management/assets/swagger_preview.png)
 
 
-## Run the API Locally
+## Run Locally
 
 ```bash
 git clone https://github.com/OlajideTechie/Task-Management.git
@@ -69,7 +75,6 @@ python manage.py runserver
 # Access Swagger docs at
 
 ```http://127.0.0.1:8000/docs/```
-
 
 
 # 🔑 Want Full Access?
