@@ -17,6 +17,7 @@ mysql_data/
 # VSCode / IDE
 .vscode/
 .idea/
+.DS_Store
 
 # Migrations
 **/migrations/__pycache__/
