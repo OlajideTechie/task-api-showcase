@@ -24,3 +24,14 @@ This project is a simple yet powerful backend API that allows users to manage ta
 
 ## 📁 Folder Structure
 
+```
+task-api-showcase/
+├── README.md
+├── assets/
+│   └── swagger_preview.png       # Screenshot of Swagger UI
+├── code_samples/
+│   ├── views.py                  # Core view methods (Task create, update)
+│   ├── serializers.py            # Validation and serialization logic
+│   └── urls.py                   # API endpoint definitions
+└── LICENSE.md                    # MIT License
+```
