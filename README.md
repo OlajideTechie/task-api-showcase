@@ -12,8 +12,6 @@ I'm **Olajide Ojo**, a QA Engineer transitioning into **Backend Development**. I
 
 ---
 
-> 💡 Built as part of my transition into Backend Engineering, showcasing hands-on skills with Django, DRF, and API design.
-
 ## 📌 Project Overview
 
 This project is a backend API for managing tasks with user-based access, custom scheduling logic, and clean time validations.
