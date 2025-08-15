@@ -49,14 +49,14 @@ task-api-showcase/
 
 ## 📸 API Docs Preview
 
-![Swagger Screenshot](Task-Management/assets/swagger_preview.png)
+![Swagger Screenshot](/assets/swagger_preview.png)
 
 
 ## Run Locally
 
 ```bash
-git clone https://github.com/OlajideTechie/Task-Management.git
-cd Task-Management
+git clone https://github.com/OlajideTechie/task-api-showcase.git
+cd task-api-showcase
 
 # Set up virtual environment
 python -m venv env
@@ -65,14 +65,16 @@ source venv/bin/activate  # or env\Scripts\activate on Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Run migrations and start server
+# Run migration
 python manage.py migrate
+
+# Start the server
 python manage.py runserver
 ````
 
 # Access Swagger docs at
 
-```http://127.0.0.1:8000/docs/```
+```http://127.0.0.1:8000/swagger/```
 
 
 # 🔑 Want Full Access?
