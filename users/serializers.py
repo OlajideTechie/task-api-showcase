@@ -9,6 +9,7 @@ User = get_user_model()
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
+    
 
     class Meta:
         model = User
@@ -23,6 +24,32 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         # Use create_user to ensure the password is hashed
+        password = validated_data.get('password')
+        firsyt_name = validated_data.get('first_name')
+        last_name = validated_data.get('last_name')
+        
+        if len(password) < 8:
+            raise serializers.ValidationError("Password must be at least 8 characters long.")
+        
+        if not any(char.isdigit() for char in password):
+            raise serializers.ValidationError("Password must contain at least one numeral.")
+        
+        if not any(char.isalpha() for char in password):
+                raise serializers.ValidationError("Password must contain at least one letter.")
+            
+        if not any(char.isupper() for char in password):
+            raise serializers.ValidationError("Password must contain at least one uppercase letter.")
+        
+        if not any(char.islower() for char in password):
+            raise serializers.ValidationError("Password must contain at least one lowercase letter.")
+        
+        if not any(char in '!@#$%^&*()_+-=[]{}|;:,.<>?/' for char in password):
+            raise serializers.ValidationError("Password must contain at least one special character.")
+        
+        if len(firsyt_name) < 2 or len(last_name) < 2:
+            raise serializers.ValidationError("First name and last name must be at least 2 characters long.")
+                    
+        
         user = User.objects.create_user(
             username=validated_data['username'],
             email=validated_data['email'],
