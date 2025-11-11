@@ -30,7 +30,7 @@ schema_view = get_schema_view(
     ),
     public=True,
     permission_classes=[permissions.AllowAny],
-    url="https://e9a286a1a2b9.ngrok-free.app/swagger/",
+    url="",
 )
 
 urlpatterns = [
