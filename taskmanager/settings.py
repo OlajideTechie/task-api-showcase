@@ -33,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(",")
 
 ngrok_host = config('NGROK_URL', default=None)
 if ngrok_host:
