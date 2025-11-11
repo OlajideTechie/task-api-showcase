@@ -50,3 +50,4 @@ future~=0.18.2
 PyJWT~=2.9.0
 django-cors-headers
 psycopg
+whitenoise

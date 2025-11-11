@@ -200,3 +200,9 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
     "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
 }
+
+# Absolute path to the directory where collectstatic will collect static files
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+# Your other static settings
+STATIC_URL = '/static/'
