@@ -60,7 +60,7 @@ cd task-api-showcase
 
 # Set up virtual environment
 python -m venv env
-source venv/bin/activate  # or env\Scripts\activate on Windows
+source env/bin/activate  # or env\Scripts\activate on Windows
 
 # Install dependencies
 pip install -r requirements.txt
