@@ -25,7 +25,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         # Use create_user to ensure the password is hashed
         password = validated_data.get('password')
-        firsyt_name = validated_data.get('first_name')
+        first_name = validated_data.get('first_name')
         last_name = validated_data.get('last_name')
         
         if len(password) < 8:
@@ -46,7 +46,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         if not any(char in '!@#$%^&*()_+-=[]{}|;:,.<>?/' for char in password):
             raise serializers.ValidationError("Password must contain at least one special character.")
         
-        if len(firsyt_name) < 2 or len(last_name) < 2:
+        if len(first_name) < 2 or len(last_name) < 2:
             raise serializers.ValidationError("First name and last name must be at least 2 characters long.")
                     
         
